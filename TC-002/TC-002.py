@@ -46,7 +46,7 @@ try:
             first_dropdown_option = data['first_dropdown']
 
             dropdown_element = driver.find_element(By.CSS_SELECTOR, '.dropdown > .btn-outline-secondary').click()
-            print("Dropdown clicked")
+            print("First dropdown clicked")
             time.sleep(2)
 
             driver.find_element(By.LINK_TEXT, first_dropdown_option).click()
@@ -63,6 +63,18 @@ try:
             driver.find_element(By.LINK_TEXT, second_dropdown_option).click()
             print(f"{test_case_id}: Second dropdown option selected: {second_dropdown_option}")
             time.sleep(2)
+
+            # Verify expected result
+            expected_text = data['expected_result']
+            actual_text = driver.find_element(By.CSS_SELECTOR, '.text-xs-center:nth-child(4) > .text-muted').text
+
+            if actual_text == expected_text:
+                print(f"{test_case_id}: Verification passed - Expected: '{expected_text}', Actual: '{actual_text}'")
+            else:
+                print(f"{test_case_id}: Verification failed - Expected: '{expected_text}', Actual: '{actual_text}'")
+                print(f"{test_case_id} Failed")
+                test_case_number += 1
+                continue  # Skip to the next test case
 
             # Mark test case as passed
             print(f"{test_case_id} Passed")

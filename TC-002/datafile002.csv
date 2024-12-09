@@ -1,7 +1,7 @@
-first_dropdown,second_dropdown
-All,Sort by dates
-Overdue,Sort by dates
-Next 7 days,Sort by dates
-Next 30 days,Sort by courses
-Next 3 months,Sort by courses
-Next 6 months,Sort by courses
+first_dropdown,second_dropdown,expected_result
+All,Sort by dates,No activities require action
+Overdue,Sort by dates,No activities require action
+Next 7 days,Sort by dates,No activities require action
+Next 30 days,Sort by courses,No activities require action
+Next 3 months,Sort by courses,No activities require action
+Next 6 months,Sort by courses,No activities require action
