@@ -1,0 +1,7 @@
+first_dropdown,second_dropdown,expected_result
+All,Sort by dates,Attempt quiz now
+Overdue,Sort by dates,No activities require action
+Next 7 days,Sort by dates,No activities require action
+Next 30 days,Sort by courses,Attempt quiz now
+Next 3 months,Sort by courses,Attempt quiz now
+Next 6 months,Sort by courses,Attempt quiz now
